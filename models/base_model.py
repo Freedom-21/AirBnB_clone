@@ -7,6 +7,7 @@ Defines the BaseModel class that will serve as the base class for other models.
 
 import uuid
 from datetime import datetime
+import models
 
 
 class BaseModel():
@@ -24,6 +25,7 @@ class BaseModel():
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
+            models.storage.new(self)
 
     def __str__(self):
         """Returns a string representation of the instance"""
@@ -34,6 +36,7 @@ class BaseModel():
            updated_at with currnet datetime"""
 
         self.updated_at = datetime.now()
+        models.storage.save()
 
     def to_dict(self):
         """Returns a dictionary containing all key:value of __dict__"""
