@@ -8,10 +8,15 @@ Airbnb is an online marketplace that connects people who want to rent out their 
 
 The purpose of this project is to implement this application in our own way and step by step
 
-## How to interact with the application
+## Command Interpreter
 
-### How to run
+The command interpreter allows users to create, retrieve, update, and delete objects.
 
-### How to use
+
+### How to start
+
+'''bash
+./console.py
+
 
 
