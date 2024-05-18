@@ -9,10 +9,10 @@ import uuid
 
 
 class TestBaseModel(unittest.TestCase):
-    """Test cases for the BaseModel class"""
+    """test cases for the BaseModel class"""
 
     def test_instance_creation(self):
-        """Test if an instance of BaseModel is created correctly"""
+        """test if an instance of BaseModel is created correctly"""
         obj = BaseModel()
         self.assertIsInstance(obj, BaseModel)
         self.assertIsInstance(obj.id, str)
@@ -20,20 +20,20 @@ class TestBaseModel(unittest.TestCase):
         self.assertIsInstance(obj.updated_at, datetime)
 
     def test_str_method(self):
-        """Test the __str__ method"""
+        """test the __str__ method"""
         obj = BaseModel()
         expected_str = f"[BaseModel] ({obj.id}) {obj.__dict__}"
         self.assertEqual(str(obj), expected_str)
 
     def test_save_method(self):
-        """Test the save method updates updated_at attribute"""
+        """test the save method updates updated_at attribute"""
         obj = BaseModel()
         old_updated_at = obj.updated_at
         obj.save()
         self.assertNotEqual(obj.updated_at, old_updated_at)
 
     def test_to_dict_method(self):
-        """Test the to_dict method"""
+        """test the to_dict method"""
         obj = BaseModel()
         obj_dict = obj.to_dict()
         self.assertEqual(obj_dict['__class__'], 'BaseModel')
@@ -42,7 +42,7 @@ class TestBaseModel(unittest.TestCase):
         self.assertEqual(obj_dict['updated_at'], obj.updated_at.isoformat())
 
     def test_kwargs_init(self):
-        """Test initialization with kwargs"""
+        """test initialization with kwargs"""
         obj = BaseModel()
         obj.name = "Test"
         obj.number = 42

@@ -7,10 +7,10 @@ from models.city import City
 
 
 class TestCity(unittest.TestCase):
-    """Test cases for the City class"""
+    """test cases for the City class"""
 
     def test_instance_creation(self):
-        """Test if an instance of City is created correctly"""
+        """test if an instance of City is created correctly"""
         obj = City()
         self.assertIsInstance(obj, City)
         self.assertEqual(obj.state_id, "")

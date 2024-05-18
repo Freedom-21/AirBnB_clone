@@ -1,16 +1,16 @@
 #!/usr/bin/python3
 """
-Unittest for User class
+unittest for User class
 """
 import unittest
 from models.user import User
 
 
 class TestUser(unittest.TestCase):
-    """Test cases for the User class"""
+    """test cases for the User class"""
 
     def test_instance_creation(self):
-        """Test if an instance of User is created correctly"""
+        """test if an instance of User is created correctly"""
         obj = User()
         self.assertIsInstance(obj, User)
         self.assertEqual(obj.email, "")

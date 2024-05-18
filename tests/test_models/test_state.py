@@ -1,16 +1,16 @@
 #!/usr/bin/python3
 """
-Unittest for State class
+unittest for State class
 """
 import unittest
 from models.state import State
 
 
 class TestState(unittest.TestCase):
-    """Test cases for the State class"""
+    """test cases for the State class"""
 
     def test_instance_creation(self):
-        """Test if an instance of State is created correctly"""
+        """test if an instance of State is created correctly"""
         obj = State()
         self.assertIsInstance(obj, State)
         self.assertEqual(obj.name, "")

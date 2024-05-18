@@ -1,16 +1,16 @@
 #!/usr/bin/python3
 """
-Unittest for Place class
+unittest for Place class
 """
 import unittest
 from models.place import Place
 
 
 class TestPlace(unittest.TestCase):
-    """Test cases for the Place class"""
+    """test cases for the Place class"""
 
     def test_instance_creation(self):
-        """Test if an instance of Place is created correctly"""
+        """test if an instance of Place is created correctly"""
         obj = Place()
         self.assertIsInstance(obj, Place)
         self.assertEqual(obj.name, "")

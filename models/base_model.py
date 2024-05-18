@@ -2,7 +2,7 @@
 
 """
 BaseModel module
-Defines the BaseModel class that will serve as the base class for other models.
+defines the BaseModel class that will serve as the base class for other models.
 """
 
 import uuid
@@ -11,10 +11,10 @@ import models
 
 
 class BaseModel():
-    """Defines all common methods for other classes"""
+    """defines all common methods for other classes"""
 
     def __init__(self, *args, **kwargs):
-        """Initialize a new instances of base model"""
+        """initialize a new instances of base model"""
         if kwargs:
             for key, value in kwargs.items():
                 if key == 'created_at' or key == 'updated_at':
@@ -28,7 +28,7 @@ class BaseModel():
             models.storage.new(self)
 
     def __str__(self):
-        """Returns a string representation of the instance"""
+        """returns a string representation of the instance"""
         return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"
 
     def save(self):
@@ -39,7 +39,7 @@ class BaseModel():
         models.storage.save()
 
     def to_dict(self):
-        """Returns a dictionary containing all key:value of __dict__"""
+        """returns a dictionary containing all key:value of __dict__"""
         dictionary = self.__dict__.copy()
         dictionary['__class__'] = self.__class__.__name__
         dictionary['created_at'] = self.created_at.isoformat()
