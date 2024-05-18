@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """
 Initialization module for models package
 Creates a unique FileStorage instance for the application
