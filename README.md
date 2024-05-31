@@ -1,3 +1,4 @@
+# Web Static
 # AirBnB Project
 
 ## Description
@@ -17,6 +18,5 @@ The command interpreter allows users to create, retrieve, update, and delete obj
 
 '''bash
 ./console.py
-
 
 
